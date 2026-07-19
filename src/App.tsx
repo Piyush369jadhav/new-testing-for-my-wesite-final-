@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
+import { Infinity } from "lucide-react";
 
 export default function App() {
   // Use Hash Routing for seamless hosting
@@ -96,6 +97,7 @@ function HomeView({ navigate }: ViewProps) {
       <header className="brandbar" id="top-header">
         <div className="brandbar-inner flex items-center gap-4">
           <a href="#/" onClick={(e) => navigate("/", e)} className="wordmark flex items-center gap-3" id="lnk-wordmark">
+            <Infinity className="w-8 h-8 text-black" />
             <span className="text-3xl font-bold tracking-tight text-gray-950">Automationgo</span>
           </a>
           <span className="brandbar-tag border-l border-gray-200 pl-4 text-sm text-gray-600" id="tag-brand">
@@ -437,6 +439,7 @@ function MemoView({ navigate }: ViewProps) {
       <header className="brandbar" id="memo-header">
         <div className="brandbar-inner flex items-center gap-4">
           <a href="#/" onClick={(e) => navigate("/", e)} className="wordmark flex items-center gap-3" id="lnk-memo-home">
+            <Infinity className="w-8 h-8 text-black" />
             <span className="text-3xl font-bold tracking-tight text-gray-950">Automationgo</span>
           </a>
           <span className="brandbar-tag border-l border-gray-200 pl-4 text-sm text-gray-600" id="tag-memo-nav">Memorandum · 01
@@ -556,6 +559,7 @@ function ResearchView({ navigate }: ViewProps) {
       <header className="brandbar" id="research-header">
         <div className="brandbar-inner flex items-center gap-4">
           <span className="wordmark flex items-center gap-3">
+            <Infinity className="w-8 h-8 text-black" />
             <a href="#/" onClick={(e) => navigate("/", e)} id="lnk-research-home" className="text-3xl font-bold tracking-tight text-gray-950">
               Automationgo
             </a>
