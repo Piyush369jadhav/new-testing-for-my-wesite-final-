@@ -246,10 +246,18 @@ function HomeView({ navigate }: ViewProps) {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4" id="list-signals">
                     <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
                       <div className="flex items-center gap-2">
-                        <span className="px-2 py-0.5 font-mono text-[10px] bg-[#0f7659] text-white rounded">HIRING</span>
-                        <span className="font-semibold text-sm text-[var(--ink)]">Department Expansion Signals</span>
+                        <span className="px-2 py-0.5 font-mono text-[10px] bg-orange-700 text-white rounded">CLINICAL</span>
+                        <span className="font-semibold text-sm text-[var(--ink)]">CRO &amp; Phase Testing Activity, 2026</span>
                       </div>
-                      <p className="text-xs text-[var(--sub)]">Teams scaling &amp; specific high-urgency roles opening up, indicating immediate operational capacity demands.</p>
+                      <p className="text-xs text-[var(--sub)]">New CRO engagements and Phase I to III progressions signal a biotech nearing its next milestone. CRO market forecast: ~$93B in 2026.</p>
+                    </div>
+
+                    <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2 py-0.5 font-mono text-[10px] bg-[#0f7659] text-white rounded">HIRING</span>
+                        <span className="font-semibold text-sm text-[var(--ink)]">US Tech Hiring Surges, 2026</span>
+                      </div>
+                      <p className="text-xs text-[var(--sub)]">Engineering, data, and infrastructure teams scaling fast, revealing capacity gaps before roles go public.</p>
                     </div>
 
                     <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
@@ -266,14 +274,6 @@ function HomeView({ navigate }: ViewProps) {
                         <span className="font-semibold text-sm text-[var(--ink)]">Executive Relocations</span>
                       </div>
                       <p className="text-xs text-[var(--sub)]">New decision-makers entering corporate seats, actively bringing in strategic initiatives and tools.</p>
-                    </div>
-
-                    <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
-                      <div className="flex items-center gap-2">
-                        <span className="px-2 py-0.5 font-mono text-[10px] bg-emerald-700 text-white rounded">GROWTH</span>
-                        <span className="font-semibold text-sm text-[var(--ink)]">Expansion Indicators</span>
-                      </div>
-                      <p className="text-xs text-[var(--sub)]">Unannounced high-momentum indicators captured early prior to public marketing announcement releases.</p>
                     </div>
                   </div>
 
