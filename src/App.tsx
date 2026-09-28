@@ -67,7 +67,7 @@ interface ViewProps {
   navigate: (path: string, e: React.MouseEvent<HTMLAnchorElement>) => void;
 }
 
-type TabType = "signals" | "beginner" | "model";
+type TabType = "signals" | "beginner" | "model" | "biotech-recruitment";
 
 function HomeView({ navigate }: ViewProps) {
   const [activeTab, setActiveTab] = useState<TabType>("signals");
@@ -220,6 +220,13 @@ function HomeView({ navigate }: ViewProps) {
             >
               Core Operational Focus
             </button>
+            <button
+              onClick={() => setActiveTab("biotech-recruitment")}
+              className={`tab-btn ${activeTab === "biotech-recruitment" ? "active" : ""}`}
+              id="btn-tab-biotech-recruitment"
+            >
+              Recruitment &amp; Biotech Signals
+            </button>
           </div>
 
           <div className="tab-pane-content" id="pane-tab-content">
@@ -339,6 +346,58 @@ function HomeView({ navigate }: ViewProps) {
                       <span>• CURRENT ACTIVE PARTNERSHIP ALIGNMENTS OPEN: 2</span>
                     </div>
                   </div>
+                </motion.div>
+              )}
+
+              {activeTab === "biotech-recruitment" && (
+                <motion.div
+                  key="biotech-recruitment-pane"
+                  initial={{ opacity: 0, y: 5 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -5 }}
+                  transition={{ duration: 0.2 }}
+                >
+                  <p className="text-sm text-[var(--sub)] font-serif italic mb-6">
+                    Real-time market intent captured across specialist Biotech and Executive Recruitment corridors:
+                  </p>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4" id="list-biotech-recruitment">
+                    <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2 py-0.5 font-mono text-[10px] bg-purple-700 text-white rounded">BIOTECH</span>
+                        <span className="font-semibold text-sm text-[var(--ink)]">Clinical Trial &amp; R&amp;D Scaling</span>
+                      </div>
+                      <p className="text-xs text-[var(--sub)]">Phase II/III trial expansions triggering urgent requirements for specialized CRO matching and wet-lab infrastructure.</p>
+                    </div>
+
+                    <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2 py-0.5 font-mono text-[10px] bg-blue-700 text-white rounded">RECRUITMENT</span>
+                        <span className="font-semibold text-sm text-[var(--ink)]">Executive Search Acceleration</span>
+                      </div>
+                      <p className="text-xs text-[var(--sub)]">High-growth enterprises scaling executive recruiting and fractional leadership placement corridors.</p>
+                    </div>
+
+                    <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2 py-0.5 font-mono text-[10px] bg-teal-700 text-white rounded">BIOTECH</span>
+                        <span className="font-semibold text-sm text-[var(--ink)]">Leadership &amp; Lab Relocations</span>
+                      </div>
+                      <p className="text-xs text-[var(--sub)]">Chief Medical Officers and VP R&amp;D transitions opening immediate windows for high-trust strategic alliances.</p>
+                    </div>
+
+                    <div className="p-4 border border-[var(--rule-soft)] bg-[var(--bg-soft)] rounded-lg flex flex-col gap-1">
+                      <div className="flex items-center gap-2">
+                        <span className="px-2 py-0.5 font-mono text-[10px] bg-amber-700 text-white rounded">RECRUITMENT</span>
+                        <span className="font-semibold text-sm text-[var(--ink)]">Engineering Headcount Surges</span>
+                      </div>
+                      <p className="text-xs text-[var(--sub)]">Sudden engineering and AI staffing spikes requiring specialized talent pipelines and remote hubs.</p>
+                    </div>
+                  </div>
+
+                  <p className="signals-source !mt-6 text-xs" id="txt-biotech-recruitment-source">
+                    Live sector telemetry updated daily via proprietary B2B matching algorithms.
+                  </p>
                 </motion.div>
               )}
             </AnimatePresence>
